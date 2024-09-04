@@ -8,9 +8,10 @@
     background: #f1f5f9; /* slate/900 */
     border: 2px solid #0f172a;
     border-radius: 24px;
+    padding: 30px;
   }
   button {
-    width: 168px;
+    min-width: 50px;
     height: 56px;
     cursor: pointer;
     background: #e2e8f0;
@@ -22,7 +23,17 @@
   margin-top: 50px;
   display: flex;
 }
+.homePage-todoContainer {
+  flex: 0.6;
+}
+.homePage-todoListContainer {
+  display: flex;
+  flex-direction: column;
 
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
 .homePage-todoLogo {
   margin-bottom: 30px;
 
@@ -37,13 +48,7 @@
   background: #bef264;
   border-radius: 23px;
 }
-.homePage-todoListContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
-}
+
 .homePage-todoList {
   display: flex;
   flex-direction: column;
@@ -53,6 +58,9 @@
 }
 
 //done
+.homePage-doneContainer {
+  flex: 0.4;
+}
 .homePage-doneLogo {
   margin-bottom: 30px;
 
@@ -78,7 +86,7 @@
 }
 //
 .homePage-checkBox {
-  width: 588px;
+  width: 90%;
   height: 50px;
   background: #ffffff;
   display: flex;
@@ -101,6 +109,32 @@
   div {
   }
 }
+.donePage-checkBox {
+  width: 90%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  border: 2px solid #0f172a;
+  border-radius: 27px;
+  background: #ede9fe;
+  input {
+    /* Ellipse 1 */
+
+    box-sizing: border-box;
+
+    /* yellow/50 */
+    background: #fefce8;
+    /* slate/900 */
+    border: 2px solid #0f172a;
+    border-radius: 100;
+  }
+  span {
+    text-decoration: line-through;
+  }
+}
 
 @media (max-width: 744px) {
   .homePage-firstSection {
@@ -112,5 +146,11 @@
       width: 162px;
       height: 56px;
     }
+  }
+  .homePage-secondSection {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }
